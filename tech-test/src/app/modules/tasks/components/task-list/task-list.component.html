@@ -1,0 +1,28 @@
+<div class="head">
+  <form [formGroup]="form">
+    <label for="input">Filter</label>
+    <input id="input" formControlName="filter" type="text">
+  </form>
+
+  <button class="btn" [routerLink]="'create'"> Create</button>
+</div>
+<div class="cards">
+
+  <ng-container *ngIf="tasks$|async as tasks">
+    <ng-container *ngFor="let task of tasks">
+      <ng-container *ngTemplateOutlet="card;context:{task}"></ng-container>
+    </ng-container>
+  </ng-container>
+
+</div>
+<ng-template #card let-task="task">
+
+  <a class="card" [class.done]="isDone(task)">
+    <div>
+      <span [routerLink]="[task.id]" class="label">{{task.label}}</span>
+      <input *ngIf="!task.done" type="checkbox" (change)="markAsDone($event,task)">
+    </div>
+    <span [routerLink]="[task.id]" class="category">{{task.category}}</span>
+  </a>
+
+</ng-template>

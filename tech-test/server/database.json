@@ -3,16 +3,58 @@
     {
       "id": 1,
       "label": "Kitchen Cleanup",
-      "description":  "Clean my dirty kitchen",
+      "description": "Clean my dirty kitchen",
       "category": "house",
-      "done": false
+      "done": true
     },
     {
       "id": 2,
-      "label": "Taxes",
-      "description":  "Start doing my taxes and contact my accountant jhon for advice",
+      "label": "Taxes Edit",
+      "description": "Start doing my taxes and contact my accountant jhon for advice",
       "category": "bureaucracy",
       "done": "22-10-2019"
+    },
+    {
+      "label": "some",
+      "description": "some",
+      "category": "some",
+      "done": true,
+      "id": 3
+    },
+    {
+      "label": "some",
+      "description": "some",
+      "category": "some",
+      "done": true,
+      "id": 4
+    },
+    {
+      "label": "Something",
+      "description": "Somehitng",
+      "category": "Nope Edit",
+      "done": true,
+      "id": 5
+    },
+    {
+      "label": "Test",
+      "description": "tzasd",
+      "category": "test",
+      "done": true,
+      "id": 6
+    },
+    {
+      "label": "some",
+      "description": "some",
+      "category": "some123",
+      "done": true,
+      "id": 7
+    },
+    {
+      "label": "",
+      "description": "",
+      "category": "",
+      "done": true,
+      "id": 8
     }
   ]
 }

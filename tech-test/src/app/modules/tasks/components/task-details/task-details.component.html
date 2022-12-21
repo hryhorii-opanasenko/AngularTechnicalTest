@@ -1,0 +1,18 @@
+<div class="card" *ngIf="task$|async as task">
+
+  <div class="header">
+    <h3 class="title">{{task.label}}<span *ngIf="task.done">: competed at {{task.done}}</span></h3>
+
+  </div>
+
+  <div class="body">
+    <h4 class="category">{{task.category}}</h4>
+    <p class="text">{{task.description}}</p>
+  </div>
+
+  <div class="footer">
+    <button class="btn" (click)="editTask(task)">Edit</button>
+    <button class="btn btn-danger" (click)="deleteTask(task)">Delete</button>
+  </div>
+
+</div>

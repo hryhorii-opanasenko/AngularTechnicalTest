@@ -1,1 +1,11 @@
-/* You can add global styles to this file, and also import other style files */
+.btn{
+  padding: 8px 15px;
+  border-radius: 8px;
+  background-color: #00acc1;
+  border-width: 1px;
+  color: white;
+  width: 100%;
+}
+.btn-danger{
+  background-color: #f44336;
+}

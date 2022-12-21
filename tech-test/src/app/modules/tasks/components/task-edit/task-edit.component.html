@@ -1,0 +1,21 @@
+<div class="card">
+  <form [formGroup]="form">
+    <div class="input">
+      <label for="label">Label: </label>
+      <input type="text" id="label" formControlName="label">
+    </div>
+
+    <div class="input">
+      <label for="label">Description: </label>
+      <input type="text" id="label" formControlName="description">
+    </div>
+
+    <div class="input">
+      <label for="label">Category: </label>
+      <input type="text" id="label" formControlName="category">
+    </div>
+
+    <button class="btn" (click)="submit()"> {{buttonText}}</button>
+  </form>
+
+</div>
