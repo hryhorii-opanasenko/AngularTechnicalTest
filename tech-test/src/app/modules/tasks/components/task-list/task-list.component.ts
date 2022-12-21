@@ -22,14 +22,12 @@ export class TaskListComponent implements OnInit {
       return this.service.tasks$.pipe(
         map((el) => {
           return el.filter((task) => {
+            const { label, category, description } = task;
+            const { filter } = value;
             return (
-              task.label.toLowerCase().includes(value.filter.toLowerCase()) ||
-              task.category
-                .toLowerCase()
-                .includes(value.filter.toLowerCase()) ||
-              task.description
-                .toLowerCase()
-                .includes(value.filter.toLowerCase())
+              this.filter(label, filter) ||
+              this.filter(category, filter) ||
+              this.filter(description, filter)
             );
           });
         })
@@ -48,5 +46,9 @@ export class TaskListComponent implements OnInit {
     this.service
       .updateTask({ ...task, done: event.target.checked })
       .subscribe();
+  }
+
+  private filter(a: string, b: string) {
+    return a.toLowerCase().includes(b.toLowerCase());
   }
 }
